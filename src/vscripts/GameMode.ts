@@ -1,12 +1,17 @@
 import { reloadable } from "./lib/tstl-utils";
 import { modifier_panic } from "./modifiers/modifier_panic";
+import { setting } from "./settings";
 
-const heroSelectionTime = 20;
 
 declare global {
-    interface CDOTAGameRules {
-        Addon: GameMode;
+    interface freeCourier{
+        (gamemode:any,bool:any):void
     }
+    interface CDOTAGameRules{
+        Addon: GameMode;
+        SetFreeCourierModeEnabled: freeCourier
+    }
+    //interface CDOTABaseGameMode extends CDOTAGameRules{}
 }
 
 @reloadable
@@ -25,10 +30,12 @@ export class GameMode {
         this.configure();
 
         // Register event listeners for dota engine events
-        ListenToGameEvent("game_rules_state_change", () => this.OnStateChange(), undefined);
+        ListenToGameEvent("game_rules_state_change", event => this.OnStateChange(event), undefined);
         ListenToGameEvent("npc_spawned", event => this.OnNpcSpawned(event), undefined);
+        //ListenToGameEvent("dota_player_pick_hero",event => this.OnPlayerPickHero(event),undefined)
 
         // Register event listeners for events from the UI
+        /*
         CustomGameEventManager.RegisterListener("ui_panel_closed", (_, data) => {
             print(`Player ${data.PlayerID} has closed their UI panel.`);
 
@@ -45,38 +52,59 @@ export class GameMode {
             const hero = player.GetAssignedHero();
             hero.AddNewModifier(hero, undefined, modifier_panic.name, { duration: 5 });
         });
+        //*/
     }
 
     private configure(): void {
-        GameRules.SetCustomGameTeamMaxPlayers(DotaTeam.GOODGUYS, 3);
-        GameRules.SetCustomGameTeamMaxPlayers(DotaTeam.BADGUYS, 3);
+        let gamemode = GameRules.GetGameModeEntity()
+        gamemode.SetFreeCourierModeEnabled(true)
+        GameRules.SetCustomGameTeamMaxPlayers(DotaTeam.GOODGUYS, setting.GOODTEAM.count);
+        GameRules.SetCustomGameTeamMaxPlayers(DotaTeam.BADGUYS, setting.BADTEAM.count);
 
         GameRules.SetShowcaseTime(0);
-        GameRules.SetHeroSelectionTime(heroSelectionTime);
+        GameRules.SetHeroSelectionTime(setting.PREGAMETIMING.heroSelectionTime);
+
+        GameRules.SetGoldTickTime(setting.goldSettings.goldTickRate)
+        GameRules.SetGoldPerTick(setting.goldSettings.goldPerTick)
+        GameRules.SetStartingGold(setting.goldSettings.startGold)
+        print(setting.goldSettings.goldPerTick, setting.goldSettings.goldTickRate)
+        GameRules.SetSafeToLeave(true)
     }
 
-    public OnStateChange(): void {
+    public OnStateChange(event:any): void {
+        DeepPrintTable(event)
         const state = GameRules.State_Get();
 
         // Add 4 bots to lobby in tools
-        if (IsInToolsMode() && state == GameState.CUSTOM_GAME_SETUP) {
+        /*if (IsInToolsMode() && state == GameState.CUSTOM_GAME_SETUP) {
             for (let i = 0; i < 4; i++) {
-                Tutorial.AddBot("npc_dota_hero_lina", "", "", false);
+                Tutorial.AddBot("npc_dota_hero_lina", "", "easy", false);
             }
-        }
+        }//*/
 
-        if (state === GameState.CUSTOM_GAME_SETUP) {
+        /*if (state === GameState.CUSTOM_GAME_SETUP) {
             // Automatically skip setup in tools
             if (IsInToolsMode()) {
                 Timers.CreateTimer(3, () => {
                     GameRules.FinishCustomGameSetup();
                 });
             }
-        }
+        }//*/
 
         // Start game once pregame hits
         if (state === GameState.PRE_GAME) {
             Timers.CreateTimer(0.2, () => this.StartGame());
+        }
+        if(state === GameState.STRATEGY_TIME){
+            for(let i=0;i<19;i++){
+                if (PlayerResource.IsValidPlayerID(i)){
+                    if(!PlayerResource.HasSelectedHero(i)){
+                        PlayerResource.GetPlayer(i)?.MakeRandomHeroSelection()
+                        PlayerResource.SetHasRandomed(i)
+                        print("Player "+i+" ramdom with gamemode")
+                    }
+                }
+            }
         }
     }
 
@@ -98,10 +126,10 @@ export class GameMode {
         const unit = EntIndexToHScript(event.entindex) as CDOTA_BaseNPC; // Cast to npc since this is the 'npc_spawned' event
         // Give all real heroes (not illusions) the meepo_earthbind_ts_example spell
         if (unit.IsRealHero()) {
-            if (!unit.HasAbility("meepo_earthbind_ts_example")) {
-                // Add lua ability to the unit
-                unit.AddAbility("meepo_earthbind_ts_example");
-            }
         }
+    }
+    private OnPlayerPickHero(event:DotaPlayerPickHeroEvent){
+        print("SASSASSASS")
+        print(PlayerResource.HasRandomed(event.player as PlayerID))
     }
 }
