@@ -36,7 +36,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"9 10 11 12"
+		"AbilityManaCost"				"8"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -45,8 +45,8 @@
 			"frost_arrows_movement_speed"	"-10 -25 -40 -55"
 			"damage"
 			{
-				"value"						"6 12 18 24"
-				"special_bonus_unique_drow_ranger_2"			"+15"
+				"value"						"8 16 24 32"
+				"special_bonus_unique_drow_ranger_2"			"+16"
 				"CalculateSpellDamageTooltip"	"0"
 			}
 			"shard_regen_reduction_pct_per_stack"
@@ -58,7 +58,7 @@
 			"shard_bonus_damage_per_stack"
 			{
 				"value"								"0"
-				"special_bonus_scepter"				"+18"
+				"special_bonus_scepter"				"+20"
 				"RequiresScepter"					"1"
 			}
 			"shard_stack_duration"
@@ -77,7 +77,7 @@
 			"shard_burst_damage_per_stack"
 			{
 				"value"								"0"
-				"special_bonus_scepter"				"+60"
+				"special_bonus_scepter"				"+75"
 				"DamageTypeTooltip"						"DAMAGE_TYPE_MAGICAL"
 				"RequiresScepter"					"1"
 			}
@@ -96,7 +96,7 @@
 			"shard_max_stacks"
 			{
 				"value"								"0"
-				"special_bonus_scepter"				"+9"
+				"special_bonus_scepter"				"+12"
 				"RequiresScepter"					"1"
 			}
 		}
@@ -120,7 +120,7 @@
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastPoint"				"0.0"
-		"AbilityChannelTime"			"1.75"
+		"AbilityChannelTime"			"1.285 1.7 2.55 3.4"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -134,10 +134,10 @@
 		{
 			"wave_count"
 			{
-				"value"				"3"
-				"special_bonus_unique_drow_ranger_8"		"+1"
+				"value"				"2 3 4 5"
+				"special_bonus_unique_drow_ranger_8"		"+3"
 			}			
-			"arrow_count_per_wave"				"4"
+			"arrow_count_per_wave"				"4 5 6 7"
 			"arrow_damage_pct"
 			{
 				"value"										"100 120 140 160"
@@ -146,8 +146,8 @@
 			"arrow_slow_duration"		"1.25 2 2.75 3.5"
 			"arrow_width"					"90"
 			"arrow_speed"					"1200"
-			"arrow_range_multiplier"	"1.75"
-			"arrow_angle"					"50"
+			"arrow_range_multiplier"	"1.75 1.85 1.95 2.05"
+			"arrow_angle"					"37.5 50 62.5 75"
             "bypass_block"              "1"
 			"AbilityCooldown"			
 			{
@@ -231,19 +231,19 @@
 					"special_bonus_unique_drow_ranger_4"	"+250"
 
 				}
-				"silence_duration"	"3 4 5 6"
-				"knockback_distance_max"	"450"
+				"silence_duration"	"3 4.25 5.5 6.75"
+				"knockback_distance_max"	"475"
 				"knockback_duration"		"0.6 0.7 0.8 0.9"
 				"knockback_height"		"0"
 				"wave_length"		"900"
 				"bonus_movespeed"		
 				{
 					"value"					"10 12 14 16"
-					"special_bonus_unique_drow_ranger_gust_selfmovespeed"		"+15"
+					"special_bonus_unique_drow_ranger_gust_selfmovespeed"		"+16"
 				}
 				"AbilityCooldown"
 				{
-					"value"											"19 17 15 13"
+					"value"											"18 16 14 12"
 					"special_bonus_unique_drow_ranger_7"			"-4"
 				}
 				"miss_chance"
@@ -314,23 +314,23 @@
 		{
 			"chance"
 			{
-				"value"										"20 30 40"
-				"special_bonus_unique_drow_ranger_3"		"+12"
+				"value"										"25 40 55"
+				"special_bonus_unique_drow_ranger_3"		"+18"
 			}
 			"bonus_damage"									
 			{
-				"value"										"40 60 80"
+				"value"										"45 70 95"
 			}
-			"agility_multiplier"							"30 40 50"
+			"agility_multiplier"							"35 60 85"
 			"agility_range"									"1200"
-			"agility_multiplier_ally"						"50"
+			"agility_multiplier_ally"						"70"
 			"split_count"
 			{		
-				"value"										"0"
-				"special_bonus_scepter"						"0"
+				"value"										"2"
+				"special_bonus_scepter"						"1"
 			}
 			"split_range"									"375"
-			"split_damage_reduction"						"50"
+			"split_damage_reduction"						"80"
 			"disable_range"									"400"
 		
 		}

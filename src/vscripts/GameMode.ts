@@ -1,6 +1,10 @@
 import { reloadable } from "./lib/tstl-utils";
 import { modifier_panic } from "./modifiers/modifier_panic";
 import { setting } from "./settings";
+import { Events } from "./events"
+import { Creator } from "./myScripts/creator";
+import { ChatCommandModule } from "./myScripts/chatCommand";
+//print("Real Hero? ",(!(<CDOTA_BaseNPC>killed_unit).IsReincarnating()))
 
 
 declare global {
@@ -13,7 +17,9 @@ declare global {
     }
     //interface CDOTABaseGameMode extends CDOTAGameRules{}
 }
-
+let eventModule = new Events();
+let creatorModule = new Creator();
+let chatCommandModule = new ChatCommandModule();
 @reloadable
 export class GameMode {
     public static Precache(this: void, context: CScriptPrecacheContext) {
@@ -22,6 +28,7 @@ export class GameMode {
     }
 
     public static Activate(this: void) {
+        print("Active customgame")
         // When the addon activates, create a new instance of this GameMode class.
         GameRules.Addon = new GameMode();
     }
@@ -30,8 +37,10 @@ export class GameMode {
         this.configure();
 
         // Register event listeners for dota engine events
-        ListenToGameEvent("game_rules_state_change", event => this.OnStateChange(event), undefined);
-        ListenToGameEvent("npc_spawned", event => this.OnNpcSpawned(event), undefined);
+        
+        ListenToGameEvent("game_rules_state_change", event => eventModule.OnStateChange(event), undefined);
+        ListenToGameEvent("npc_spawned", event => eventModule.OnNpcSpawned(event), undefined);
+        ListenToGameEvent("entity_killed", event => eventModule.OnEntityKilled(event), undefined);
         //ListenToGameEvent("dota_player_pick_hero",event => this.OnPlayerPickHero(event),undefined)
 
         // Register event listeners for events from the UI
@@ -56,6 +65,7 @@ export class GameMode {
     }
 
     private configure(): void {
+        this.initModule()
         let gamemode = GameRules.GetGameModeEntity()
         gamemode.SetFreeCourierModeEnabled(true)
         GameRules.SetCustomGameTeamMaxPlayers(DotaTeam.GOODGUYS, setting.GOODTEAM.count);
@@ -70,49 +80,14 @@ export class GameMode {
         print(setting.goldSettings.goldPerTick, setting.goldSettings.goldTickRate)
         GameRules.SetSafeToLeave(true)
     }
-
-    public OnStateChange(event:any): void {
-        DeepPrintTable(event)
-        const state = GameRules.State_Get();
-
-        // Add 4 bots to lobby in tools
-        /*if (IsInToolsMode() && state == GameState.CUSTOM_GAME_SETUP) {
-            for (let i = 0; i < 4; i++) {
-                Tutorial.AddBot("npc_dota_hero_lina", "", "easy", false);
-            }
-        }//*/
-
-        /*if (state === GameState.CUSTOM_GAME_SETUP) {
-            // Automatically skip setup in tools
-            if (IsInToolsMode()) {
-                Timers.CreateTimer(3, () => {
-                    GameRules.FinishCustomGameSetup();
-                });
-            }
-        }//*/
-
-        // Start game once pregame hits
-        if (state === GameState.PRE_GAME) {
-            Timers.CreateTimer(0.2, () => this.StartGame());
-        }
-        if(state === GameState.STRATEGY_TIME){
-            for(let i=0;i<19;i++){
-                if (PlayerResource.IsValidPlayerID(i)){
-                    if(!PlayerResource.HasSelectedHero(i)){
-                        PlayerResource.GetPlayer(i)?.MakeRandomHeroSelection()
-                        PlayerResource.SetHasRandomed(i)
-                        print("Player "+i+" ramdom with gamemode")
-                    }
-                }
-            }
-        }
+    initModule(){
+        print("Init modules")
+        creatorModule.Init()
+        chatCommandModule.Init()
     }
+    
 
-    private StartGame(): void {
-        print("Game starting!");
 
-        // Do some stuff here
-    }
 
     // Called on script_reload
     public Reload() {
@@ -121,13 +96,7 @@ export class GameMode {
         // Do some stuff here
     }
 
-    private OnNpcSpawned(event: NpcSpawnedEvent) {
-        // After a hero unit spawns, apply modifier_panic for 8 seconds
-        const unit = EntIndexToHScript(event.entindex) as CDOTA_BaseNPC; // Cast to npc since this is the 'npc_spawned' event
-        // Give all real heroes (not illusions) the meepo_earthbind_ts_example spell
-        if (unit.IsRealHero()) {
-        }
-    }
+    
     private OnPlayerPickHero(event:DotaPlayerPickHeroEvent){
         print("SASSASSASS")
         print(PlayerResource.HasRandomed(event.player as PlayerID))

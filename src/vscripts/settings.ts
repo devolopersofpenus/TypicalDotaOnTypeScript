@@ -1,28 +1,3 @@
-interface Team{
-    count:number                //Players on team
-}
-interface PreGameTiming{
-    gameSetupTime:number        //How long should custom game setup last - the screen where players pick a team?
-    heroSelectionTime:number    //How long should we let people select their hero? Should be at least 5 seconds.
-    strategyTime:number         //How long should strategy time last? Bug: You can buy items during strategy time and it will not be spent!
-    showCaseTime:number         //How long should show case time be?
-    preGameTime:number          //How long after showcase time should the horn blow and the game start?
-    postGAmeTime:number         //How long should we let people stay around before closing the server automatically?
-}
-interface Buyback{
-    baybackEnabled:boolean
-    baybackCooldown:number
-}
-interface Gold{
-    startGold:number
-    randomGold:number
-    goldPerTick:number
-    goldTickRate:number
-}
-interface CustopXP{
-    USE_CUSTOM_XP_VALUES:boolean
-    maxLevel:number
-}
 class Settings{
     GOODTEAM:Team ={
         count:5
@@ -48,8 +23,27 @@ class Settings{
         goldPerTick: 2,
         goldTickRate: 0.9
     }
+    respawnTime:RespawnTime={
+        fixedRespawn: -1,
+        maxRespawn: 120,
+        useCustomRespawnTime: true,
+        respawnTimeLevels: []
+    }
+    maxLevel=30
+    private levelCalculate(){
+        this.respawnTime.respawnTimeLevels[0]=5
+        for(let i =1;i<this.maxLevel;i++){
+            if(i<11){
+                this.respawnTime.respawnTimeLevels[i]=this.respawnTime.respawnTimeLevels[i-1]+1
+            }else if(i<26){
+                this.respawnTime.respawnTimeLevels[i]=this.respawnTime.respawnTimeLevels[i-1]+2
+            }else{
+                this.respawnTime.respawnTimeLevels[i]=this.respawnTime.respawnTimeLevels[i-1]+5
+            }
+        }
+    }
     constructor(){
-
+        this.levelCalculate()
     }
 }
 export let setting= new Settings();

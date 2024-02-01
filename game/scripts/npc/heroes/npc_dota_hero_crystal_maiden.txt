@@ -57,14 +57,14 @@
 			"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
 			"AbilityCooldown"
 			{
-				"value"										"11 10 9 8"
+				"value"										"10 9 8 7"
 				"special_bonus_unique_crystal_maiden_5"		"-4"
 			}
 			"AbilityManaCost"				"115 135 155 175"
 			"radius"
 			{
-				"value"										"425"
-				"special_bonus_unique_crystal_maiden_6"		"+125"
+				"value"										"425 440 455 470"
+				"special_bonus_unique_crystal_maiden_6"		"+225"
 				"affected_by_aoe_increase"	"1"
 			}
 			"movespeed_slow"				"-20 -30 -40 -50"
@@ -73,8 +73,8 @@
 			"vision_duration"				"6.0"
 			"nova_damage"
 			{
-				"value"										"110 160 210 260"
-				"special_bonus_unique_crystal_maiden_2"		"+300"
+				"value"										"115 180 245 310"
+				"special_bonus_unique_crystal_maiden_2"		"+365"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
@@ -115,19 +115,19 @@
 			"AbilityManaCost"				"125 135 145 155"
 			"damage_per_second"
 			{
-				"value"			"100"
+				"value"			"100 105 110 115"
 				"CalculateSpellDamageTooltip" "1"
 			}
-			"creep_damage_per_second"		"100"
+			"creep_damage_per_second"		"100 110 120 130"
 			"duration"
 			{
-				"value"										"1.5 2 2.5 3"
-				"special_bonus_unique_crystal_maiden_1"		"+1.25"
+				"value"										"1.6 2.2 2.8 3.4"
+				"special_bonus_unique_crystal_maiden_1"		"+1.6"
 			}
 			"creep_duration"
 			{
 				"value"										"10"
-				"special_bonus_unique_crystal_maiden_1"		"+1.25"
+				"special_bonus_unique_crystal_maiden_1"		"+1.6"
 			}
 			"tick_interval"					"0.20"
 			
@@ -150,21 +150,21 @@
 		{
 			"base_mana_regen"					
 			{
-				"value"										"0.4 0.6 0.8 1.0"
-				"special_bonus_unique_crystal_maiden_4" 	"+0.5"
+				"value"										"0.5 0.75 1.0 1.25"
+				"special_bonus_unique_crystal_maiden_4" 	"+0.75"
 			}
 			"proximity_mana_regen_tooltip"					
 			{
-				"value"										"1.2 1.8 2.4 3.0"
-				"special_bonus_unique_crystal_maiden_4" 	"+1.5"
+				"value"										"2.0 3.0 4.0 5.0"
+				"special_bonus_unique_crystal_maiden_4" 	"+3.0"
 			}
 			"self_mana_regen_tooltip"					
 			{
-				"value"										"2.8 4.2 5.6 7.0"
-				"special_bonus_unique_crystal_maiden_4" 	"+3.0"
+				"value"										"4.0 6.0 8.0 10.0"
+				"special_bonus_unique_crystal_maiden_4" 	"+6.0"
 			}
-			"self_factor"					"7"
-			"proximity_bonus_factor"		"3"
+			"self_factor"					"8"
+			"proximity_bonus_factor"		"4"
 			"proximity_bonus_radius"		"1200"
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
@@ -199,34 +199,34 @@
 		{
 			"AbilityChannelTime"			"10"
 			"AbilityCastPoint"				"0"
-			"AbilityCooldown"				"100 95 90"
+			"AbilityCooldown"				"100 90 80"
 			"AbilityDuration"				"10.0"
 			"AbilityManaCost"				"200 400 600"
 			"radius"						
 			{
-				"value"		"810"
+				"value"		"810 840 870"
 					"affected_by_aoe_increase"	"1"
 			}
 			"explosion_radius"				
 			{
-				"value"		"320"
+				"value"		"320 350 380"
 					"affected_by_aoe_increase"	"1"
 			}
 			"bonus_armor"					"20"
-			"explosion_interval"			"0.1"
+			"explosion_interval"			"0.1 0.9 0.8"
 			"movespeed_slow"				"-40"
 			"attack_slow"					"-60"
 			"slow_duration"					"1.0"
 			"explosion_min_dist"			"195"
 			"explosion_max_dist"			
 			{
-				"value"	"785"
+				"value"	"785 805 825"
 					"affected_by_aoe_increase"	"1"
 			}
 			"damage"
 			{
-				"value"										"105 170 250"
-				"special_bonus_unique_crystal_maiden_3"		"+50"
+				"value"										"105 180 280"
+				"special_bonus_unique_crystal_maiden_3"		"+125"
 			}
 			"frostbite_delay" // negative means don't apply.
 			{
@@ -237,13 +237,13 @@
 			"shard_bonus_explosion"
 			{
 				"shard_bonus_explosion"		"0"
-				"special_bonus_scepter"		"+20"
+				"special_bonus_scepter"		"+40"
 				"RequiresShard"				"1"
 			}
 			"shard_self_movement_speed_slow_pct"			
 			{
 				"value"						"0"
-				"special_bonus_scepter"		"-75"
+				"special_bonus_scepter"		"-60"
 				"RequiresScepter"				"1"
 			}
 			"can_move"
@@ -307,10 +307,10 @@
 		{
 			"hop_distance"				"275"
 			"hop_duration"				"0.3"
-			"clone_duration"			"5"
+			"clone_duration"			"10"
 			"frostbite_radius"			
 			{
-				"value"						"450"
+				"value"						"600"
 				"affected_by_aoe_increase"	"1"
 			}
 			

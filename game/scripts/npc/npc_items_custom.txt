@@ -1,0 +1,57 @@
+"DOTAAbilities"
+{
+"item_soulstone"
+{
+	//Created by D2AbilityCreator 2.1
+	"BaseClass"		"item_datadriven"
+	"AbilityBehavior"		""
+	"ItemInitialCharges"		"6"
+	"Modifiers"
+	{
+		"stats"
+        {
+            //Created by D2AbilityCreator 2.1
+            "Passive"		"1"
+            "IsBuff"		"1"
+            "IsDebuff"		"0"
+            "IsHidden"		"1"
+            "IsPurgable"		"0"
+            "Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE"
+            "Properties"
+            {
+                "MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"		"%mana_regen_const"
+                "MODIFIER_PROPERTY_MANA_DRAIN_AMPLIFY_PERCENTAGE"		"%mana_regen_perc"
+                "MODIFIER_PROPERTY_MANA_BONUS"		"%mana_bonus"
+                "MODIFIER_PROPERTY_HEALTH_BONUS"		"%health_bonus"
+                "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%int_bonus"
+            }
+        }
+	}
+	"AbilityValues"
+	{
+		"mana_regen_const"		"0"//"6"
+		"mana_regen_perc"		"2000"
+		"mana_bonus"		"525"
+		"health_bonus"		"525"
+		"int_bonus"		"0"//"30"
+	}
+}
+"item_recipe_soulstone"
+{
+	//Created by D2AbilityCreator 2.1
+	"BaseClass"		"item_datadriven"
+	"ItemRecipe"		"1"
+	"ItemResult"		"item_soulstone"
+	"AbilityBehavior"		""
+	"Model"		"models/props_gameplay/recipe.vmdl"
+	"AbilityTextureName"		"recipe_icon_item"
+	"ItemPurchasable"		"1"
+	"ItemShopTags"		""
+	"ItemCost"		"900"
+	"ItemRequirements"
+	{
+		"01"		"item_soul_booster;item_mystic_staff"
+	}
+}
+}
+

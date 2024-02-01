@@ -1,0 +1,120 @@
+"lang"
+{
+	"Language"		"Russian"
+	"Tokens"
+	{		
+		"game_mode_15"															"Typical dota"
+		"addon_game_name"														"Typical dota"
+		
+		//"DOTA_Basics"							"ABILITIES"
+		//"DOTA_Upgrades"						"ITEMS"
+		//"DOTA_Shop_Category_Basics"			"ABILITIES"
+		//"DOTA_Shop_Category_Upgrades"			"ITEMS"
+		
+		//"npc_dota_hero_ancient_apparition"										"Detonator"
+		//"npc_dota_hero_ancient_apparition_barebones"							"Detonator"
+		
+		//--------------------
+		//Abilities
+		//--------------------
+		//"DOTA_Tooltip_ability_example_ability"									"Detonation"
+		//"DOTA_Tooltip_ability_example_ability_Description"						"Detonator channels a charge and releases an explosion around the caster if the channel is successful, dealing damage and knocking back all enemies in range of the explosion"
+		//"DOTA_Tooltip_ability_example_ability_Lore"								"Boom!"
+		//"DOTA_Tooltip_ability_example_ability_duration"							"DURATION:"
+		//"DOTA_Tooltip_ability_example_ability_radius"								"RADIUS:"
+		//"DOTA_Tooltip_ability_example_ability_distance"							"KNOCKBACK DISTANCE:"
+		//"DOTA_Tooltip_ability_example_ability_height"								"KNOCKBACK HEIGHT:"
+		//"DOTA_Tooltip_ability_example_ability_damage"								"DAMAGE:"
+		
+		"DOTA_Tooltip_ability_chaos_knight_reality_rift_barebones"							"#DOTA_Tooltip_ability_chaos_knight_reality_rift"
+		"DOTA_Tooltip_ability_chaos_knight_reality_rift_barebones_Description"				"#DOTA_Tooltip_ability_chaos_knight_reality_rift_Description"
+		"DOTA_Tooltip_ability_chaos_knight_reality_rift_barebones_Lore"						"#DOTA_Tooltip_ability_chaos_knight_reality_rift_Lore"
+		"DOTA_Tooltip_ability_chaos_knight_reality_rift_barebones_Note0"					"Chaos Knight and the target unit are made to face each other, and Chaos Knight and his phantasms are issued an attack order against the target."
+		"DOTA_Tooltip_ability_chaos_knight_reality_rift_barebones_Note1"					"You can use html in tooltips."
+		"DOTA_Tooltip_ability_chaos_knight_reality_rift_barebones_armor_reduction"			"ARMOR REDUCTION:"
+		"DOTA_Tooltip_ability_chaos_knight_reality_rift_barebones_reduction_duration"		"REDUCTION DURATION:"
+		"DOTA_Tooltip_ability_chaos_knight_reality_rift_barebones_illusion_search_radius"	"ILLUSION SEARCH RADIUS:"
+		
+		"DOTA_Tooltip_modifier_chaos_knight_reality_rift_custom"							"Reality Rift"
+		"DOTA_Tooltip_modifier_chaos_knight_reality_rift_custom_Description"				"Armor reduced by %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%."
+		
+		"DOTA_Tooltip_Ability_detonator_conjure_image"							"Conjure Image"
+		"DOTA_Tooltip_Ability_detonator_conjure_image_Description"				"Make an illusion out of any creep or hero."
+
+		//------------------------
+		// Shard
+		//------------------------
+		
+		//Morphling
+		"DOTA_Tooltip_ability_morphling_morph_agi_shard_description"					"Позволяет применять эту способность во время оглушения. Убирает расход маны."
+		"DOTA_Tooltip_ability_morphling_morph_str_shard_description"					"Позволяет применять эту способность во время оглушения. Убирает расход маны."
+
+
+		//------------------------
+		// Items
+		//------------------------
+		"DOTA_Tooltip_ability_item_example_item"								"Shield Blaster"
+		"DOTA_Tooltip_ability_item_example_item_Description"					"<h1>Active: Blast</h1> Gives the caster a 50% damage reduction for 4 seconds while firing a projectile that deals damage 125 PURE damage to any enemy it hits."
+		"DOTA_Tooltip_ability_item_example_item_Lore"							"Does anyone read this?"
+		"DOTA_Tooltip_ability_item_example_item_duration"						"DURATION:"
+		"DOTA_Tooltip_ability_item_example_item_damage_reduction"				"%DAMAGE REDUCTION:"
+		"DOTA_Tooltip_ability_item_example_item_radius"							"PROJECTILE RADIUS:"
+		"DOTA_Tooltip_ability_item_example_item_speed"							"PROJECTILE SPEED:"
+		"DOTA_Tooltip_ability_item_example_item_distance"						"DISTANCE:"
+		"DOTA_Tooltip_ability_item_example_item_damage"							"DAMAGE:"
+		"DOTA_Tooltip_ability_item_example_item_bonus_agi"                      "+$agi"
+		"DOTA_Tooltip_ability_item_example_item_bonus_damage"                   "+$damage"
+		
+		"DOTA_Tooltip_modifier_item_shield"										"Blaster Shield"
+		"DOTA_Tooltip_modifier_item_shield_Description"							"All damage is reduced by %dMODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE%%%."
+		
+		//-------------------------
+		// Talants
+		//-------------------------
+		
+		//"DOTA_Tooltip_ability_"										""
+		"DOTA_Tooltip_ability_special_bonus_unique_dawnbreaker_luminosity_crit"	"+{s:value} к лечению и критическому урону от Luminosity"
+		"DOTA_Tooltip_ability_dawnbreaker_solar_guardian_Description"				"ПРЕРЫВАЕМАЯ — герой создаёт пульсирующий эффект в радиусе %max_offset_distance% от любого героя. Каждая пульсация наносит урон врагам и излечивает союзников. После небольшой подготовки герой летит в указанную область, при приземлении нанося врагам дополнительный урон и оглушая их. Начав применение этой способности, её нельзя прервать."
+		//"DOTA_Tooltip_ability_razor_static_link_pull_speed" "ПРИТЯЖЕНИЕ ДРУГ К ДРУГУ:"
+
+		"DOTA_Tooltip_ability_special_bonus_unique_gyrocopter_5"	"Неогр. дальность Call Down, –{s:bonus_AbilityCooldown} сек. перезарядки и +{s:bonus_total_strikes} к количеству воздушных ударов"	
+		//"DOTA_Tooltip_ability_special_bonus_unique_gyrocopter_1"	"–{s:value} сек. перезарядки Flak Cannon и -{s:bonus_fire_rate} интервалу атак автоматической турели"
+		
+		//-------------------------
+		// Ability
+		//-------------------------
+		//Skywrath mage
+		"DOTA_Tooltip_ability_skywrath_mage_arcane_bolt_scepter_int_multiplier"		"МНОЖИТЕЛЬ ИНТЕЛЛЕКТА:"
+
+		//phantom lanser
+		"DOTA_Tooltip_ability_phantom_lancer_doppelwalk_Description"					"Герой и все иллюзии неподалёку ненадолго исчезают с поля боя. Через %delay% сек. в случайных точках указанной области появляются сам герой, его копии, а также две новые иллюзии с разными характеристиками. Продлевает время жизни всех иллюзий. Одна из них получает обычный урон, но не наносит его, а другая — получает %illusion_2_damage_in_pct%%% и наносит %illusion_2_damage_out_pct_tooltip%%% урона.\n\nТИП РАЗВЕИВАНИЯ: нормальное"
+
+
+		//"DOTA_Tooltip_ability_"
+		//"DOTA_Tooltip_ability__Description"
+		//"DOTA_Tooltip_ability__Lore"
+		//dark willow
+		"DOTA_Tooltip_ability_dark_willow_bedlam_target_count"	"ЧИСЛО ЦЕЛЕЙ АТАКИ:"
+
+		//wisp
+		//"DOTA_Tooltip_ability_wisp_spirits_scepter_description"					"Духи постоянно кружатся вокруг героя. При столкновении с вражеским героем дух ненадолго замедляет его. Взорвавшиеся духи возвращаются по одному раз в секунду. Добавляет 4 духа. Способность можно применить, чтобы взорвать духов."
+		//"DOTA_Tooltip_ability_wisp_spirits_scepter_spirit_amount" "КОЛИЧЕСТВО ДУХОВ:"
+		//"DOTA_Tooltip_ability_dark_willow_bedlam_targets"	""
+
+		//
+
+
+		"DOTA_Tooltip_ability_custom_ability_axe_culling_blade"						"CULLING BLADE"
+		"DOTA_Tooltip_ability_custom_ability_axe_culling_blade_Description"			"Герой кидается на ослабшего противника, мгновенно убивая цель, если у неё низкий уровень здоровья. В ином случае удар нанесёт лишь небольшой урон. Герой и его союзники поблизости получат дополнительную скорость, а способность мгновенно восстановится, если ей убить вражеского героя."
+		"DOTA_Tooltip_ability_custom_ability_axe_culling_blade_Lore"				"Словно воплощение самой яростной битвы, Могул Хан жестоко расправляется с теми, кто осмелился дать ему бой."
+		"DOTA_Tooltip_ability_custom_ability_axe_culling_blade_kill_threshold"		"ЗДОРОВЬЯ ДЛЯ УБИЙСТВА:"
+		"DOTA_Tooltip_ability_custom_ability_axe_culling_blade_damage"				"УРОН ПРИ НЕУДАЧЕ:"
+		"DOTA_Tooltip_ability_custom_ability_axe_culling_blade_speed_bonus"				"ДОП. СКОРОСТЬ ПЕРЕДВИЖЕНИЯ:"
+		"DOTA_Tooltip_ability_custom_ability_axe_culling_blade_atk_speed_bonus_tooltip"	"ДОП. СКОРОСТЬ АТАКИ:"
+		"DOTA_Tooltip_ability_custom_ability_axe_culling_blade_speed_duration"			"ДЛИТЕЛЬНОСТЬ УСКОРЕНИЯ:"
+		"DOTA_Tooltip_ability_custom_ability_axe_culling_blade_speed_aoe"					"РАДИУС УСКОРЕНИЯ:"
+		
+		
+		
+	}
+}

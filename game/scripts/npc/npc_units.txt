@@ -10707,7 +10707,7 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air
-		"MovementSpeed"				"290"		// Speed
+		"MovementSpeed"				"330"		// Speed
 		"MovementTurnRate"			"0.5"		// Turning rate.
 	
 		// Bounty
@@ -11050,8 +11050,8 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackDamageMin"			"85"			// Damage range min.
-		"AttackDamageMax"			"85"			// Damage range max.
+		"AttackDamageMin"			"90"			// Damage range min.
+		"AttackDamageMax"			"90"			// Damage range max.
 	}
 
 	"npc_dota_shadow_shaman_ward_3"
@@ -11060,8 +11060,8 @@
 	
 		// Attack
 		//----------------------------------------------------------------
-		"AttackDamageMin"			"120"			// Damage range min.
-		"AttackDamageMax"			"120"			// Damage range max.
+		"AttackDamageMin"			"140"			// Damage range min.
+		"AttackDamageMax"			"140"			// Damage range max.
 	}
 
 	// Venomancer Plague Wards
@@ -15302,8 +15302,8 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1100"		// Base health.
-		"StatusHealthRegen"			"5"			// Health regeneration rate.
+		"StatusHealth"				"1200"		// Base health.
+		"StatusHealthRegen"			"6"			// Health regeneration rate.
 		"StatusMana"				"300"		// Base mana.
 		"StatusManaRegen"			"0.5"		// Mana regeneration rate.		 
 		
@@ -15317,6 +15317,11 @@
 		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
 		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 
+		//Attributes
+		"AttributeBaseStrength"		"10"
+		"AttributeBaseAgility"		"10"
+		"AttributeBaseIntelligence"		"5"
+
 		//Inventory
 		"HasInventory"				"1"
 	}	
@@ -15325,15 +15330,15 @@
 		"include_keys_from" "npc_dota_lone_druid_bear1"
 
 		"ModelScale" 					".72"
-		"AttackRate"				"1.65"		// Speed of attack.
+		"AttackRate"				"1.64"		// Speed of attack.
 
 		"MovementSpeed"				"360"		// Speed.
 		"MovementTurnRate"			"0.6"		// Turning rate.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1400"		// Base health.
-		"StatusHealthRegen"			"6"			// Health regeneration rate.
+		"StatusHealth"				"1600"		// Base health.
+		"StatusHealthRegen"			"8"			// Health regeneration rate.
 		"StatusMana"				"300"		// Base mana.
 		"StatusManaRegen"			"0.5"		// Mana regeneration rate.		 	
 	}	
@@ -15343,14 +15348,14 @@
 		"include_keys_from" "npc_dota_lone_druid_bear1"
 		
 		"ModelScale" 					".78"
-		"AttackRate"				"1.55"		// Speed of attack.
+		"AttackRate"				"1.53"		// Speed of attack.
 		"MovementSpeed"				"380"		// Speed.
 		"MovementTurnRate"			"0.6"		// Turning rate.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1700"		// Base health.
-		"StatusHealthRegen"			"7"			// Health regeneration rate.
+		"StatusHealth"				"2000"		// Base health.
+		"StatusHealthRegen"			"10"			// Health regeneration rate.
 		"StatusMana"				"300"			// Base mana.
 		"StatusManaRegen"			"0.5"		// Mana regeneration rate.		 	
 	}	
@@ -15359,14 +15364,14 @@
 		"include_keys_from" "npc_dota_lone_druid_bear1"
 						
 		"ModelScale" 					".85"
-		"AttackRate"				"1.45"		// Speed of attack.
+		"AttackRate"				"1.42"		// Speed of attack.
 		"MovementSpeed"				"400"		// Speed.
 		"MovementTurnRate"			"0.6"		// Turning rate.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"2000"		// Base health.
-		"StatusHealthRegen"			"8"			// Health regeneration rate.
+		"StatusHealth"				"2400"		// Base health.
+		"StatusHealthRegen"			"12"			// Health regeneration rate.
 		"StatusMana"				"300"		// Base mana.
 		"StatusManaRegen"			"0.5"		// Mana regeneration rate.		 	
 	}	

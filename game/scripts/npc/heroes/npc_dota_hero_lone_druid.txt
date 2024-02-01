@@ -32,12 +32,12 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"bear_hp"					"1100 1400 1700 2000"
-			"bear_regen_tooltip"	"5 6 7 8"
+			"bear_hp"					"1200 1600 2000 2400"
+			"bear_regen_tooltip"	"6 8 10 12"
 			"bear_bat"
 			{
-				"value"					"1.75 1.65 1.55 1.45"
-				"special_bonus_unique_lone_druid_10"	"-0.1"
+				"value"					"1.75 1.64 1.53 1.42"
+				"special_bonus_unique_lone_druid_10"	"-0.17"
 			}
 			"bear_armor"				"0 2 4 6"
 			"backlash_damage"			"20.0"
@@ -55,15 +55,15 @@
 			"bonus_bear_hp"
 			{
 				"value"					"0"
-				"special_bonus_unique_lone_druid_7"		"+1000"
+				"special_bonus_unique_lone_druid_7"		"+1500"
 			}
 			"bonus_bear_armor"
 			{
 				"value"				"0"
 				"special_bonus_unique_lone_druid_2"	"+7"
 			}
-			"damage_gain_per_druid_level"			"5"
-			"hp_gain_per_druid_level"				"90"
+			"damage_gain_per_druid_level"			"7"
+			"hp_gain_per_druid_level"				"100"
 
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
@@ -139,9 +139,9 @@
 					"special_bonus_unique_lone_druid_6"	"+40"
 				}
 				"lifesteal_percent"			"15 30 45 60"
-				"armor_sharing"				"8 12 16 20"
+				"armor_sharing"				"10 20 30 40"
 				"duration"					"20"
-				"active_bonus"				"35"
+				"active_bonus"				"45"
 
 				"AbilityCooldown"
 				{
@@ -197,23 +197,23 @@
 				"only_affects_player_units"	"1"
 				"shard_radius"
 				{
-					"value"					"700"
+					"value"					"800"
 					"RequiresShard"				"1"
 					"affected_by_aoe_increase"	"1"
 				}
 				"shard_movement_speed_pct"				
 				{
-					"value"					"15"
+					"value"					"25"
 					"RequiresShard"				"1"
 				}
 				"shard_attack_speed"				
 				{
-					"value"				"40"
+					"value"				"60"
 					"RequiresShard"				"1"
 				}
 				"shard_duration"				
 				{
-					"value"				"5.0"
+					"value"				"8.0"
 					"RequiresShard"				"1"
 				}
 				"AbilityCooldown"				
@@ -294,14 +294,14 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"bonus_armor"				"8 10 12"
+			"bonus_armor"				"8 12 16"
 			"bonus_hp"
 			{
-				"value"					"500 1000 1500"
-				"special_bonus_unique_lone_druid_7"	"+1000"
+				"value"					"750 1500 2250"
+				"special_bonus_unique_lone_druid_7"	"+1500"
 			}
 			"base_attack_time"			"0"
-			"duration"					"40"
+			"duration"					"50"
 			"transformation_time"		"1.933"
 			"AbilityCooldown"
 			{
@@ -461,10 +461,10 @@
 		"AbilityValues"
 		{
 				"damage"				"30 40 50 60"
-				"entangle_chance"		"20"
+				"entangle_chance"		"20 25 30 35"
 				"hero_duration"			"1 1.6 2.2 2.8"
 				"creep_damage_multiplier"		"3"
-				"hero_entangle_chance"		"30"
+				"hero_entangle_chance"		"30 35 40 45"
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}
@@ -574,11 +574,11 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"duration"				"2.5"
+			"duration"				"3.75"
 			"drag_distance"			"200"
 			"break_distance"		"425"
 			"damage"				"300"
-			"self_slow"				"0"
+			"self_slow"				"-10"
 			"AbilityCooldown"		"30"
 			"tick_rate"			"0.5"
 
@@ -603,17 +603,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"spell_resistance"		"33"
+				"spell_resistance"		"33 38.5 44 49.5"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_building_damage"		"10 20 30 40"
+				"bonus_building_damage"		"12 24 36 48"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"true_form_bonus_building_damage"		"15 30 45 60"
+				"true_form_bonus_building_damage"		"18 36 54 72"
 			}
 		}
 	}

@@ -31,41 +31,42 @@
 		{
 				"AbilityCooldown"
 				{
-					"value"	"16 15 14 13"
+					"value"	"15 14 13 12"
 					"special_bonus_unique_underlord_5"	"-3"
 				}
 				"radius"					
 				{
-					"value"					"425 430 435 440"
-					"special_bonus_unique_underlord_8"	"+75"
+					"value"					"430 437.5 445 452.5"
+					"special_bonus_unique_underlord_8"	"+127.5"
 					"affected_by_aoe_increase"	"1"		
 				}
 				"wave_duration"					
 				{
-					"value"	"7.0"
-					"special_bonus_unique_underlord_7"	"+2"
+					"value"	"7.0 6.3 6.4 6.3"
+					"special_bonus_unique_underlord_7"	"+3.5"
 				}
-				"wave_count"					"6"
+				"wave_count"					"6 7 8 9"
 				"wave_damage"								
 				{
-					"value"					"30 50 70 90"
+					"value"					"30 60 90 120"
+					"special_bonus_shard"	"+45"
 					"CalculateSpellDamageTooltip"	"1"
 				}
-				"wave_interval"					"1.0"
+				"wave_interval"					"1.0 0.9 0.8 0.7"
 				"burn_damage"					
 				{
 					"value"					"1.5 2 2.5 3"
-					"special_bonus_unique_underlord_4"	"+0.8"
+					"special_bonus_unique_underlord_4"	"+1.2"
 				}
-				"burn_interval"					"1.0"
-				"burn_duration"					"2.0"
+				"burn_interval"					"1.0 0.9 0.8 0.7"
+				"burn_duration"					"2.0 2.2 2.4 2.6"
 				"can_target_units"
 				{
 					"special_bonus_shard"	"+1"
 				}
 				"shard_wave_count_bonus"	
 				{
-					"special_bonus_shard"	"+3"
+					"special_bonus_shard"	"+4"
 				}
 				"shard_wave_interval_reduction"	
 				{
@@ -108,22 +109,22 @@
 		{
 			"radius"
 			{
-				"value"					"400"
-				"special_bonus_unique_underlord_6"	"+75"
+				"value"					"400 410 420 430"
+				"special_bonus_unique_underlord_6"	"+100"
 				"affected_by_aoe_increase"	"1"		
 			}
 
-			"pit_duration"					"12.0"
-			"pit_interval"					"3.6"
+			"pit_duration"					"12.0 12.5 13 13.5"
+			"pit_interval"					"3.6 3.4 3.2 3.0"
 			"pit_damage"					"20 30 40 50"
 			"ensnare_duration"
 			{
 				"value"	"1.2 1.4 1.6 1.8"
-				"special_bonus_unique_underlord" "+0.65"
+				"special_bonus_unique_underlord" "+0.7.5"
 			}
 			"speed_bonus"
 			{
-				"special_bonus_scepter" "+40"
+				"special_bonus_scepter" "+45"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
@@ -144,33 +145,33 @@
 
 		"AbilityValues"
 		{
-			"radius"						"900"
+			"radius"						"900 1100 1300 1400"
 			"damage_reduction_pct"
 			{
-				"value"		"6 14 22 30"
-				"special_bonus_unique_underlord_3"	"+15"
+				"value"		"8 16 24 32"
+				"special_bonus_unique_underlord_3"	"+18"
 				"CalculateSpellDamageTooltip"		"0"
 				"DamageTypeTooltip"					"DAMAGE_TYPE_NONE"
 			}
 			"bonus_damage_from_creep"
 			{
-				"value"							"2 4 6 8"
+				"value"							"3 6 9 12"
 				"CalculateSpellDamageTooltip"	"0"
 			}
 			"bonus_damage_from_hero"
 			{
-				"value"							"30 35 40 45"
+				"value"							"45 70 95 120"
 				"CalculateSpellDamageTooltip"	"0"
 			}
 			"bonus_damage_duration"
 			{
-				"value"							"35 45 55 65"
+				"value"							"40 55 70 85"
 				"CalculateSpellDamageTooltip"	"0"
 				"DamageTypeTooltip"				"DAMAGE_TYPE_NONE"
 			}
 			"bonus_shared_by_allies_pct"
 			{
-				"special_bonus_unique_underlord_9"	"+50"
+				"special_bonus_unique_underlord_9"	"+75"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
@@ -272,13 +273,13 @@
 				"duration"				"20.0"
 				"damage_reduction"		"14 22 30"
 				"bonus_ms"				"10 20 30"
-				"buff_duration"			"5.0 6.0 7.0"
+				"buff_duration"			"5.5 7.0 8.5"
 				"minimum_distance"		"2000"
 				"spawn_pit_on_cast"
 				{
 					"special_bonus_scepter"	"+1"
 				}
-				"warp_channel_duration"			"3.5"
+				"warp_channel_duration"			"3.5 3.0 2.5"
 				"distance_from_fountain"		"1425"
 		}
 	}

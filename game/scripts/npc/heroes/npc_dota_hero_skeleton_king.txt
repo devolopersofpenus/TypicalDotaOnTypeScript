@@ -267,8 +267,8 @@
 			}
 			"AbilityCooldown"
 			{
-				"value"							"180 150 120"
-				"special_bonus_scepter"			"-15"
+				"value"							"140 110 80"
+				"special_bonus_scepter"			"-30"
 			}
 		}
 	}

@@ -3,7 +3,10 @@
 	HideInTools = false
 	IsPlayable = true
 	IsTemplate = false
-	maps = [  ]
+	maps = 
+	[
+		"dota",
+	]
 	CheckAFKPlayers = true
 	DefaultMap = ""
 	Default_Keys = null

@@ -35,7 +35,7 @@
 		"AbilityValues"
 		{
 				"duration"				"7 8 9 10"
-				"attack_range_bonus"	"350 400 450 500"
+				"attack_range_bonus"	"375 450 525 600"
 				"percent_damage"		"4 6 8 10"
 				"tick_rate"				"1.0"
 				"damage_duration"		
@@ -50,7 +50,7 @@
 					"value"			"16 24 32 40"
 					"LinkedSpecialBonus"	"special_bonus_unique_winter_wyvern_1"
 				}
-				"night_vision_bonus"	"400"
+				"night_vision_bonus"	"450"
 				"projectile_speed_bonus"	"500"
 				"tree_destruction_radius"
 				{
@@ -61,12 +61,12 @@
 				"max_attacks"			"5"
 				"mana_cost_scepter"		
 				{
-					"value"		"20"
+					"value"		"12"
 					"RequiresScepter"			"1"
 				}
 				"movement_scepter"		
 				{
-					"value"		"25"
+					"value"		"30"
 					"RequiresScepter"			"1"
 				}
 		}
@@ -119,7 +119,7 @@
 				"secondary_projectile_speed"		"1000"
 				"damage"				
 				{
-					"value"		"100 180 260 340"
+					"value"		"120 240 360 480"
 					"LinkedSpecialBonus"	"special_bonus_unique_winter_wyvern_7"
 				}
 		}
@@ -163,18 +163,19 @@
 				"duration"			"4.0"
 				"heal_additive"		
 				{
-					"value"		"40 45 50 55"
+					"value"		"40 50 60 70"
 					"LinkedSpecialBonus"	"special_bonus_unique_winter_wyvern_5"
 				}
 				"heal_percentage"	"2.25 3 3.75 4.5"
 				"shard_cooldown_reduction"
 				{
-					"value"		"4.0"	
+					"value"		"6.0"	
 					"RequiresShard"				"1"
 				}
 				"shard_splinter_range"
 				{
 					"value"		"1200"	
+					"LinkedSpecialBonus"	"special_bonus_unique_winter_wyvern_2"
 					"RequiresShard"				"1"
 					"affected_by_aoe_increase"	"1"	
 				}
@@ -221,8 +222,8 @@
 					"value"	"525"
 					"affected_by_aoe_increase"	"1"	
 				}
-				"damage_reduction"	"100"
-				"damage_amplification"	"30"
+				"damage_reduction"	"75"
+				"damage_amplification"	"45"
 				"bonus_attack_speed"	"65"
 				"duration"			
 				{
@@ -250,7 +251,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"17"
+				"value"				"21"
 				"ad_linked_abilities"			"winter_wyvern_arctic_burn"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -388,7 +389,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"100"
+				"value"				"180"
 				"ad_linked_abilities"			"winter_wyvern_splinter_blast"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
